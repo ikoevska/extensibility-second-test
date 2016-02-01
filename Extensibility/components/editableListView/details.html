@@ -1,0 +1,16 @@
+<div data-role="view" data-title="Details" data-model="app.editableListView.editableListViewModel" data-bind="events: { show: detailsShow }" id="editableListViewModelDetailsView">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <a data-role="backbutton" data-align="left">Back</a>
+            <span data-bind="text: currentItem.Text" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;"></span>
+        </div>
+    </header>
+
+    <div class="details-content">
+
+
+        <img data-bind="attr: { src: currentItem.PictureUrl }" width="100%" height="auto">
+    </div>
+    <!-- START_CUSTOM_CODE_editableListViewModel -->
+    <!-- END_CUSTOM_CODE_editableListViewModel -->
+</div>

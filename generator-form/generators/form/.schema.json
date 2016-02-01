@@ -1,0 +1,56 @@
+{
+    "name": "form",
+    "title": "Copy of Form",
+    "description": "",
+    "type": "object",
+    "properties": [
+        {
+            "name": "name",
+            "title": "Name",
+            "type": "string",
+            "description": "How do you want to name your form?",
+            "required": "required",
+            "default": "form"
+        },
+        {
+            "name": "parent",
+            "type": "string",
+            "description": "To which view do you want to add the form?",
+            "enum": [],
+            "required": "requiredCli",
+            "ref": "kendo-ui-mobile:view"
+        },
+        {
+            "name": "submitButton",
+            "title": "Confirm button",
+            "editor": "ToggleTextEditor",
+            "group": "Buttons",
+            "type": "string",
+            "description": "How do you want to label the confirmation button? Press Space and hit Enter to omit the button.",
+            "required": "requiredOptional",
+            "default": "Confirm"
+        },
+        {
+            "name": "cancelButton",
+            "title": "Cancel button",
+            "editor": "ToggleTextEditor",
+            "group": "Buttons",
+            "type": "string",
+            "description": "How do you want to label the cancellation button? Press Space and hit Enter to omit the button.",
+            "required": "requiredOptional",
+            "default": "Cancel"
+        },
+        {
+            "name": "components",
+            "type": "array",
+            "title": "Form fields",
+            "editor": "ComponentsEditor",
+            "group": "Form fields",
+            "description": "Your form contains the following child components.",
+            "default": [],
+            "required": "required",
+            "no-prompt": true
+        }
+    ],
+    "parent": "kendo-ui-mobile:form"
+}

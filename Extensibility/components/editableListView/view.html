@@ -1,0 +1,17 @@
+<div data-role="view" data-title="Pretty List" data-layout="main" data-model="app.editableListView" data-show="app.editableListView.onShow" data-after-show="app.editableListView.afterShow">
+
+    <!-- START_CUSTOM_CODE_editableListView -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_editableListView -->
+    <ul data-role="listview" data-style="inset" data-template="editableListViewModelTemplate" data-bind="{ source: editableListViewModel.dataSource, events: {click: editableListViewModel.itemClick} }" data-pull-to-refresh="false" data-endless-scroll="false">
+    </ul>
+    <!-- START_CUSTOM_CODE_editableListViewModel -->
+    <!-- END_CUSTOM_CODE_editableListViewModel -->
+    <script type="text/x-kendo-template" id="editableListViewModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['Text'] #</h3>
+
+        </div>
+    </script>
+</div>

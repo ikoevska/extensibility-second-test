@@ -1,0 +1,15 @@
+<div id="<%= name %>" class="form-view">
+    <form>
+        <ul class="form-content" data-role="listview" data-style="inset">
+        </ul>
+
+        <div class="button-group"><% if(typeof cancelButton !== 'undefined' && cancelButton) { %>
+            <a data-role="button" data-bind="events: { click: <%= name %>.cancel }"><%= cancelButton %></a><% } %><% if(typeof submitButton !== 'undefined' && submitButton) { %>
+            <a class="primary" data-role="button" data-bind="events: { click: <%= name %>.submit }"><%= submitButton %></a><% } %>
+        </div>
+    </form>
+    <!-- START_CUSTOM_CODE_<%= name %> -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_<%= name %> -->
+</div>

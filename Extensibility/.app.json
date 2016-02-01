@@ -8,9 +8,69 @@
       "title": "Home View",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "authenticationView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:authentication",
+          "name": "authenticationViewModel",
+          "dataProvider": "extensibility",
+          "emailLabel": "Email",
+          "passwordLabel": "Password",
+          "signinLabel": "Sign In",
+          "signinRedirect": "home",
+          "enableRegistration": true,
+          "gotoRegisterLabel": "Register",
+          "registerEmailLabel": "Email",
+          "registerPasswordLabel": "Password",
+          "registerNameLabel": "Name",
+          "registerLabel": "Register",
+          "registerRedirect": "home",
+          "gotoSigninLabel": "Sign In"
+        }
+      ],
+      "title": "Lovely Authentication",
+      "addToNavigation": true,
+      "icon": "featured"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "editableListView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:editableList",
+          "listExtraFields": [],
+          "detailExtraFields": [],
+          "components": [],
+          "name": "editableListViewModel",
+          "dataProvider": "extensibility",
+          "collection": "Activities",
+          "headerField": "Text",
+          "detailImageField": "Picture",
+          "addItemForm": false,
+          "editItemForm": false,
+          "pullToRefresh": false,
+          "endlessScroll": false,
+          "deleteItemButton": false
+        }
+      ],
+      "title": "Pretty List",
+      "addToNavigation": true,
+      "icon": "settings"
     }
   ],
-  "dataProviders": [],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "extensibility",
+      "title": "Extensibility / Extensibility",
+      "source": "everlive",
+      "everliveKey": "g407o71w714xys5r",
+      "offlineStorage": true
+    }
+  ],
   "name": "kendoUiMobileApp",
   "navigation": "tabstrip",
   "view": "home",
