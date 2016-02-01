@@ -1,0 +1,57 @@
+<div class="signin-view">
+    <form>
+        <ul data-role="listview" data-style="inset">
+            <li>
+                <label><%= emailLabel %>
+                    <input type="email"<% if (typeof emailPlaceholder !== 'undefined' && emailPlaceholder.length) { %> placeholder="<%= emailPlaceholder %>" <% } %>data-bind="value: <%= name %>.email" required
+                           autofocus/>
+                </label>
+            </li>
+            <li>
+                <label><%= passwordLabel %>
+                    <input type="password"<% if (typeof passwordPlaceholder !== 'undefined' && passwordPlaceholder.length) { %> placeholder="<%= passwordPlaceholder %>" <% } %>data-bind="value: <%= name %>.password"
+                           required/>
+                </label>
+            </li>
+        </ul>
+
+        <div class="button-group button-group-vertical">
+            <a data-role="button" class="primary" data-bind="events: { click: <%= name %>.signin }"><%= signinLabel %></a>
+            <% if (enableRegistration) { %>
+                <a data-role="button" data-bind="events: { click: <%= name %>.toggleView }"><%= gotoRegisterLabel %></a>
+            <% } %>
+        </div>
+    </form>
+</div><% if (enableRegistration) { %>
+<div class="signup-view" style="display:none;">
+    <form>
+        <ul data-role="listview" data-style="inset">
+            <li>
+                <label><%= registerEmailLabel %>
+                    <input type="email"<% if (typeof registerEmailPlaceholder !== 'undefined' && registerEmailPlaceholder.length) { %> placeholder="<%= registerEmailPlaceholder %>" <% } %>data-bind="value: <%= name %>.email" required>
+                </label>
+            </li>
+            <li>
+                <label><%= registerPasswordLabel %>
+                    <input type="password"<% if (typeof registerPasswordPlaceholder !== 'undefined' && registerPasswordPlaceholder.length) { %> placeholder="<%= registerPasswordPlaceholder %>" <% } %>data-bind="value: <%= name %>.password">
+                </label>
+            </li><% if (typeof registerNameLabel !== 'undefined' && registerNameLabel) { %>
+            <li>
+                <label><%= registerNameLabel %>
+                    <input type="text"<% if (typeof registerNamePlaceholder !== 'undefined' && registerNamePlaceholder.length) { %> placeholder="<%= registerNamePlaceholder %>" <% } %>data-bind="value: <%= name %>.displayName">
+                </label>
+            </li>
+        <% } %></ul>
+        <div class="button-group button-group-vertical">
+            <a class="primary" data-role="button" data-bind="events: { click: <%= name %>.register }"><%= registerLabel %></a>
+            <a data-role="button" data-bind="events: { click: <%= name %>.toggleView }"><%= gotoSigninLabel %></a>
+        </div>
+    </form>
+</div><% } %>
+<div class="offline" align="center" style="display:none;">
+    You are currently offline. Before using this app in offline mode you must initialize it while you are online
+</div>
+<!-- START_CUSTOM_CODE_<%= name %> -->
+<!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+<!-- END_CUSTOM_CODE_<%= name %> -->

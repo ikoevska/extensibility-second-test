@@ -1,0 +1,253 @@
+{
+    "name": "editableList",
+    "title": "Pretty List",
+    "description": "A data list that supports Add, Edit and Delete operations.",
+    "type": "object",
+    "properties": [
+        {
+            "name": "name",
+            "title": "Name",
+            "type": "string",
+            "description": "How do you want to name your list?",
+            "required": "required",
+            "default": "editableList"
+        },
+        {
+            "name": "parent",
+            "type": "string",
+            "description": "To which view do you want to add the list?",
+            "enum": [],
+            "required": "requiredCli",
+            "ref": "kendo-ui-mobile:view"
+        },
+        {
+            "name": "dataProvider",
+            "group": "[2]Data Binding",
+            "type": "string",
+            "title": "Provider",
+            "editor": "DataProviderEditor",
+            "description": "To which data provider do you want to bind the list?",
+            "note": "To manage Data Providers, go to the Data Tab.",
+            "required": "required",
+            "enum": [],
+            "ref": "kendo-ui-mobile:dataProvider"
+        },
+        {
+            "name": "collection",
+            "group": "[2]Data Binding",
+            "title": "Content type",
+            "editor": "DataProviderTypeEditor",
+            "type": "string",
+            "description": "What is the name of your data collection?",
+            "note": "To manage Data Providers, go to the Data Tab.",
+            "required": "requiredDependent",
+            "default": "Activities"
+        },
+        {
+            "name": "iconField",
+            "type": "boolean",
+            "group": "[3]List",
+            "title": "Icon",
+            "editor": "CheckboxEditor",
+            "required": "requiredOptional",
+            "description": "Do you want to add an icon to every item?"
+        },
+        {
+            "name": "imageField",
+            "type": "string",
+            "group": "[3]List",
+            "title": "Image",
+            "editor": "DataProviderFieldEditor",
+            "description": "Which field of the data collection do you want to use as image? Leave empty to omit.",
+            "required": "requiredOptional"
+        },
+        {
+            "name": "headerField",
+            "group": "[3]List",
+            "title": "Heading text",
+            "editor": "DataProviderFieldEditor",
+            "type": "string",
+            "description": "Which field of the data collection do you want to use as heading text?",
+            "required": "requiredDependent",
+            "default": "Text"
+        },
+        {
+            "name": "subHeaderField",
+            "group": "[3]List",
+            "title": "Subheading text",
+            "editor": "DataProviderFieldEditor",
+            "type": "string",
+            "description": "Which field of the data collection do you want to use as subheading text? Leave empty to omit.",
+            "required": "requiredOptional"
+        },
+        {
+            "name": "listExtraFields",
+            "group": "[3]List",
+            "title": "Extra Fields",
+            "editor": "NestedComponentsEditor",
+            "type": "array",
+            "default": [],
+            "formType": "list",
+            "required": "requiredOptional",
+            "no-prompt": true
+        },
+        {
+            "name": "detailHeaderField",
+            "group": "[4]Detail",
+            "title": "Heading text",
+            "editor": "DataProviderFieldEditor",
+            "type": "string",
+            "description": "Which field of the data collection do you want to use as heading text in the details view? Leave empty to omit.",
+            "required": "requiredOptional"
+        },
+        {
+            "name": "detailSubHeaderField",
+            "group": "[4]Detail",
+            "title": "Subheading text",
+            "editor": "DataProviderFieldEditor",
+            "type": "string",
+            "description": "Which field of the data collection do you want to use as subheading text in the details view? Leave empty to omit.",
+            "required": "requiredOptional"
+        },
+        {
+            "name": "detailDescriptionField",
+            "group": "[4]Detail",
+            "title": "Description",
+            "editor": "DataProviderFieldEditor",
+            "type": "string",
+            "description": "Which field of the data collection do you want to use as description in the details view? Leave empty to omit.",
+            "required": "requiredOptional"
+        },
+        {
+            "name": "detailImageField",
+            "type": "string",
+            "group": "[4]Detail",
+            "title": "Image",
+            "editor": "DataProviderFieldEditor",
+            "description": "Which field of the data collection do you want to use as image in the details view? Leave empty to omit.",
+            "required": "requiredOptional"
+        },
+        {
+            "name": "detailExtraFields",
+            "group": "[4]Detail",
+            "title": "Extra Fields",
+            "editor": "NestedComponentsEditor",
+            "type": "array",
+            "default": [],
+            "formType": "detail",
+            "required": "requiredOptional",
+            "no-prompt": true
+        },
+        {
+            "name": "addItemForm",
+            "group": "[5]Adding Items",
+            "title": "Add Item Form",
+            "editor": "ToggleNestedFormEditor",
+            "type": "boolean",
+            "formType": "add",
+            "required": "required",
+            "description": "Do you want to enable adding of new data items?",
+            "hint": "Show an 'Add' button allowing the user to add new data items.",
+            "textoff": "Enable the Add Item Form",
+            "texton": "Disable the Add Item Form",
+            "default": false
+        },
+        {
+            "name": "editItemForm",
+            "group": "[6]Editing Items",
+            "title": "Edit Item Form",
+            "editor": "ToggleNestedFormEditor",
+            "type": "boolean",
+            "formType": "edit",
+            "required": "required",
+            "description": "Do you want to enable editing of existing data items?",
+            "hint": "Show an 'Edit' button on selected items.",
+            "textoff": "Enable the Edit Item Form",
+            "texton": "Disable the Edit Item Form",
+            "default": false
+        },
+        {
+            "name": "components",
+            "type": "array",
+            "title": "Editing forms",
+            "editor": "",
+            "group": "Editing",
+            "description": "Your list supports the following editing forms.",
+            "default": [],
+            "required": "requiredOptional",
+            "no-prompt": true
+        },
+        {
+            "name": "pullToRefresh",
+            "title": "Pull to refresh",
+            "editor": "CheckboxEditor",
+            "group": "[7]Configuration",
+            "type": "boolean",
+            "description": "Do you want to enable pull-to-refresh functionality?",
+            "hint": "Enable manual refresh of the list data by pulling the view down from the top.",
+            "required": "required",
+            "default": false
+        },
+        {
+            "name": "endlessScroll",
+            "title": "Load on demand",
+            "editor": "CheckboxEditor",
+            "group": "[7]Configuration",
+            "type": "boolean",
+            "description": "Do you want to enable endless scrolling?",
+            "hint": "Enable loading the next page of data when the user scrolls near the bottom of the view.",
+            "required": "required",
+            "default": false
+        },
+        {
+            "name": "filterField",
+            "title": "Filtering",
+            "editor": "DataProviderTextFieldEditor",
+            "group": "[7]Configuration",
+            "type": "string",
+            "description": "Which field from the data source do you want to use for filtering? Leave empty to omit.",
+            "hint": "Enable filtering of the list items by matching user input to a specified text field from the data source.",
+            "required": "requiredOptional"
+        },
+        {
+            "name": "group",
+            "title": "Grouping",
+            "editor": "DataProviderTextFieldEditor",
+            "group": "[7]Configuration",
+            "type": "string",
+            "description": "Which field from the data source do you want to use for grouping? Leave empty to omit.",
+            "hint": "Enable grouping of the list items by specified text field from the data source.",
+            "required": "requiredOptional"
+        },
+        {
+            "name": "deleteItemButton",
+            "title": "Deleting Items",
+            "editor": "CheckboxEditor",
+            "group": "[7]Configuration",
+            "type": "boolean",
+            "description": "Do you want to enable deleting existing data items?",
+            "hint": "Show a 'Delete' button on selected items.",
+            "required": "requiredOptional",
+            "default": false
+        }
+    ],
+    "dependencies": [
+        {
+            "name": "dataProvider",
+            "values": [
+                "^((?!none).)*$"
+            ],
+            "required": [
+                "collection",
+                "iconField",
+                "imageField",
+                "headerField",
+                "subHeaderField",
+                "filterField",
+                "group"
+            ]
+        }
+    ],
+    "parent": "kendo-ui-mobile:editableList",
+    "componentsVersion": "0.0.14"
+}

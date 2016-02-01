@@ -1,0 +1,19 @@
+{
+    "name": "authenticationViewModel",
+    "dataProvider": "extensibility",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "signinLabel": "Sign In",
+    "signinRedirect": "home",
+    "gotoRegisterLabel": "Register",
+    "enableRegistration": true,
+    "registerEmailLabel": "Email",
+    "registerPasswordLabel": "Password",
+    "registerNameLabel": "Name",
+    "registerLabel": "Register",
+    "registerRedirect": "home",
+    "gotoSigninLabel": "Sign In",
+    "type": "authentication:authentication",
+    "title": "Lovely Authentication",
+    "isNew": true
+}

@@ -1,0 +1,7 @@
+<script type="text/x-kendo-template" id="<%= name %>Template">
+    <div class="image-with-text"><% if(typeof imageField !== 'undefined' && imageField) { %>
+        <img src="#: data['<%= imageField %>Url'] #" width="30%" height="30%"><% } %>
+        <h3><% if(typeof iconField !== 'undefined' && iconField) { %><span class="#: data.icon() #"></span><% } %>#: data['<%= headerField %>'] #</h3>
+        <% if(typeof subHeaderField !== 'undefined' && subHeaderField) { %><p>#: data['<%= subHeaderField %>'] #</p><% } %>
+    </div>
+</script>

@@ -1,0 +1,19 @@
+<div data-role="view" data-title="Details" data-model="app.<%= parent %>.<%= name %>"
+     data-bind="events: { show: detailsShow }" id="<%= name %>DetailsView">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <a data-role="backbutton" data-align="left">Back</a>
+            <span data-bind="text: currentItem.<%= (typeof detailHeaderField !== 'undefined' && detailHeaderField) || headerField || '_no_header_specified_' %>" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;"></span><% if (editItemForm) { %>
+            <a data-role="button" data-align="right" data-bind="events: { click: editClick }">Edit</a><% } %><% if (deleteItemButton) { %>
+            <a data-role="button" data-align="right" data-bind="events: { click: deleteClick }"><i class="km-icon km-delete"></i></a><% } %>
+        </div>
+    </header>
+
+    <div class="details-content">
+        <% if(typeof detailSubHeaderField !== 'undefined' && detailSubHeaderField) { %><h3 data-bind="text: currentItem.<%= detailSubHeaderField %>"></h3><% } %>
+        <% if(typeof detailDescriptionField !== 'undefined' && detailDescriptionField) { %><p data-bind="text: currentItem.<%= detailDescriptionField %>"></p><% } %>
+        <% if(typeof detailImageField !== 'undefined' && detailImageField) { %><img data-bind="attr: { src: currentItem.<%= detailImageField %>Url }" width="100%" height="auto"><% } %>
+    </div>
+    <!-- START_CUSTOM_CODE_<%= name %> -->
+    <!-- END_CUSTOM_CODE_<%= name %> -->
+</div>

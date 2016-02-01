@@ -1,0 +1,11 @@
+<div data-role="view" data-title="Edit" data-model="app.<%= parent %>.editItemViewModel" data-bind="events: { show: onShow }" id="<%= name %>EditItemView">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+            <span data-bind="text: currentItem.Text" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;" data-role="view-title"></span>
+            <a data-role="backbutton" data-align="left">Cancel</a>
+            <a data-role="button" data-align="right" data-bind="events: { click: onSaveClick }">Save</a>
+        </div>
+    </header>
+    <!-- START_CUSTOM_CODE_<%= name %> -->
+    <!-- END_CUSTOM_CODE_<%= name %> -->
+</div>

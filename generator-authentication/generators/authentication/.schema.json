@@ -1,0 +1,230 @@
+{
+    "name": "authentication",
+    "title": "Lovely Authentication",
+    "description": "",
+    "type": "object",
+    "properties": [
+        {
+            "name": "name",
+            "type": "string",
+            "title": "Name",
+            "description": "How do you want to name your authentication form?",
+            "required": "required",
+            "default": "authentication"
+        },
+        {
+            "name": "parent",
+            "type": "string",
+            "description": "To which view do you want to add the authentication form?",
+            "enum": [],
+            "required": "requiredCli",
+            "ref": "kendo-ui-mobile:view"
+        },
+        {
+            "name": "dataProvider",
+            "type": "string",
+            "title": "Provider",
+            "editor": "DataProviderEditor",
+            "group": "[1]Data Binding",
+            "description": "Which data provider do you want to use to manage the user information?",
+            "note": "To manage Data Providers, go to the Data Tab.",
+            "required": "required",
+            "enum": [],
+            "ref": "kendo-ui-mobile:dataProvider"
+        },
+        {
+            "name": "emailLabel",
+            "type": "string",
+            "editor": "TextEditorWithDefault",
+            "group": "[2]Sign In screen[0]Email",
+            "title": "Textbox label",
+            "description": "How do you want to label the email text box?",
+            "required": "required",
+            "default": "Email"
+        },
+        {
+            "name": "emailPlaceholder",
+            "type": "string",
+            "editor": "TextEditor",
+            "group": "[2]Sign In screen[0]Email",
+            "title": "Help text",
+            "description": "What help text do you want to show in the email text box? Leave empty to omit.",
+            "required": "requiredOptional",
+            "for": "emailLabel"
+        },
+        {
+            "name": "passwordLabel",
+            "type": "string",
+            "editor": "TextEditorWithDefault",
+            "group": "[2]Sign In screen[1]Password",
+            "title": "Textbox label",
+            "description": "How do you want to label the password text box?",
+            "required": "required",
+            "default": "Password"
+        },
+        {
+            "name": "passwordPlaceholder",
+            "type": "string",
+            "editor": "TextEditor",
+            "group": "[2]Sign In screen[1]Password",
+            "title": "Help text",
+            "description": "What help text do you want to show in the password text box? Leave empty to omit.",
+            "required": "requiredOptional",
+            "for": "passwordLabel"
+        },
+        {
+            "name": "signinLabel",
+            "type": "string",
+            "editor": "TextEditorWithDefault",
+            "group": "[2]Sign In screen[2]Confirm button",
+            "title": "Button label",
+            "description": "How do you want to label the confirmation button?",
+            "required": "required",
+            "default": "Sign In"
+        },
+        {
+            "name": "signinRedirect",
+            "type": "string",
+            "editor": "ComboboxEditor",
+            "group": "[2]Sign In screen[3]Redirect",
+            "title": "On success, go to:",
+            "description": "To which view do you want to navigate after a successful sign-in?",
+            "required": "required",
+            "enum": [],
+            "ref": "kendo-ui-mobile:view"
+        },
+        {
+            "name": "gotoRegisterLabel",
+            "type": "string",
+            "editor": "TextEditorWithDefault",
+            "group": "[2]Sign In screen[4]Register link",
+            "title": "Label",
+            "description": "How do you want to label the button which navigates to the registration form?",
+            "required": "requiredDependent",
+            "default": "Register"
+        },
+        {
+            "name": "enableRegistration",
+            "title": "Enable Registration",
+            "type": "boolean",
+            "editor": "ToggleButtonEditor",
+            "group": "[5]Register screen[0]",
+            "description": "Do you want to add registration functionality to this form?",
+            "hint": "Add registration functionality to this form.",
+            "textoff": "Enable register screen",
+            "texton": "Disable register screen",
+            "required": "required",
+            "default": true
+        },
+        {
+            "name": "registerEmailLabel",
+            "type": "string",
+            "editor": "TextEditorWithDefault",
+            "group": "[5]Register screen[1]Email",
+            "title": "Text box label",
+            "description": "How do you want to label the email text box in the registration form?",
+            "required": "requiredDependent",
+            "default": "Email"
+        },
+        {
+            "name": "registerEmailPlaceholder",
+            "type": "string",
+            "editor": "TextEditor",
+            "group": "[5]Register screen[1]Email",
+            "title": "Help text",
+            "description": "What help text do you want to show in the email text box in the registration form?",
+            "required": "requiredOptional",
+            "for": "registerEmailLabel"
+        },
+        {
+            "name": "registerPasswordLabel",
+            "type": "string",
+            "editor": "TextEditorWithDefault",
+            "group": "[5]Register screen[2]Password",
+            "title": "Textbox label",
+            "description": "How do you want to label the password text box in the registration form?",
+            "required": "requiredDependent",
+            "default": "Password"
+        },
+        {
+            "name": "registerPasswordPlaceholder",
+            "type": "string",
+            "editor": "TextEditor",
+            "group": "[5]Register screen[2]Password",
+            "title": "Help text",
+            "description": "What help text do you want to show in the password text box in the registration form?",
+            "required": "requiredOptional",
+            "for": "registerPasswordLabel"
+        },
+        {
+            "name": "registerNameLabel",
+            "type": "string",
+            "editor": "ToggleTextEditor",
+            "group": "[5]Register screen[3]Name",
+            "title": "Textbox label",
+            "description": "How do you want to label the display name text box in the registration form? Press Space and hit Enter to omit.",
+            "required": "requiredOptional",
+            "default": "Name"
+        },
+        {
+            "name": "registerNamePlaceholder",
+            "type": "string",
+            "editor": "TextEditor",
+            "group": "[5]Register screen[3]Name",
+            "title": "Help text",
+            "description": "What help text do you want to show in the display name text box in the registration form?",
+            "required": "requiredOptional",
+            "for": "registerNameLabel"
+        },
+        {
+            "name": "registerLabel",
+            "type": "string",
+            "editor": "TextEditorWithDefault",
+            "group": "[5]Register screen[4]Confirm button",
+            "title": "Button label",
+            "description": "How do you want label the confirmation button in the registration form?",
+            "required": "requiredDependent",
+            "default": "Register"
+        },
+        {
+            "name": "registerRedirect",
+            "type": "string",
+            "editor": "ComboboxEditor",
+            "group": "[5]Register screen[5]Redirect",
+            "title": "If the registration is successful, go to:",
+            "description": "To which view do you want to navigate after a successful registration?",
+            "required": "requiredDependent",
+            "enum": [],
+            "ref": "kendo-ui-mobile:view"
+        },
+        {
+            "name": "gotoSigninLabel",
+            "type": "string",
+            "editor": "TextEditorWithDefault",
+            "group": "[5]Register screen[6]Signin link",
+            "title": "Label",
+            "description": "How do you want to label the button that navigates to the sign-in form?",
+            "required": "requiredDependent",
+            "default": "Sign In"
+        }
+    ],
+    "dependencies": [
+        {
+            "name": "enableRegistration",
+            "values": [
+                true
+            ],
+            "required": [
+                "gotoRegisterLabel",
+                "registerEmailLabel",
+                "registerPasswordLabel",
+                "registerNameLabel",
+                "registerLabel",
+                "registerRedirect",
+                "gotoSigninLabel"
+            ]
+        }
+    ],
+    "parent": "kendo-ui-mobile:authentication",
+    "componentsVersion": "0.0.14"
+}

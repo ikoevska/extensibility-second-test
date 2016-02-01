@@ -1,0 +1,9 @@
+{
+  "ProjectName": "generator-editableList",
+  "ProjectGuid": "d68b08ff-4367-42eb-b94f-2f232603cba0",
+  "projectVersion": 1,
+  "ProjectTypeGuids": "{bc04931b-72e1-4fbc-aa11-0eb8dafc4613}",
+  "FrameworkVersion": "1.0",
+  "Framework": "screenBuilderTemplates",
+  "MasterProjectName": "Extensibility"
+}

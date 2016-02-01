@@ -1,0 +1,9 @@
+{
+  "ProjectName": "generator-authentication",
+  "ProjectGuid": "a7f4373c-8986-45c9-83a4-cd15e02c2044",
+  "projectVersion": 1,
+  "ProjectTypeGuids": "{bc04931b-72e1-4fbc-aa11-0eb8dafc4613}",
+  "FrameworkVersion": "1.0",
+  "Framework": "screenBuilderTemplates",
+  "MasterProjectName": "Extensibility"
+}
